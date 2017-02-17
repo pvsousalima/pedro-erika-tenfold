@@ -1,0 +1,23 @@
+{
+  "name": "dinamica",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "roman-numerals": "^0.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pvsousalima/pedro-erika-tenfold.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pvsousalima/pedro-erika-tenfold/issues"
+  },
+  "homepage": "https://github.com/pvsousalima/pedro-erika-tenfold#readme"
+}
