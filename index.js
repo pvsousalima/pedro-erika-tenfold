@@ -4,9 +4,12 @@
     Pedro Victor de Sousa Lima and Erika Soares
 */
 
+// conversion into arabic from roman
+var toArabic = require('roman-numerals').toArabic;
+
 // values relative to the language
 var values = {
-    isk:	"I",
+    isk:    "I",
     vev:    "V",
     xesh:   "X",
     leth:   "L",
@@ -15,9 +18,6 @@ var values = {
     mern:   "M"
 }
 
-// conversion into arabic from roman
-var toArabic = require('roman-numerals').toArabic;
-
 // get the amount in credits
 function getAmountInCredits(quotation, alienNumber) {
 
@@ -25,22 +25,15 @@ function getAmountInCredits(quotation, alienNumber) {
     var split = alienNumber.split(' ');
 
     var roman = ''
-    split.forEach(function(value, key){
+    split.forEach(function(value){
         roman += values[value];
     })
 
     try {
-
-        // get the result from arabic
-        var result = toArabic(roman);
-
-        // return the final result with the cotation applied (credits)
-        return quotation * result;
-        
+        var result = toArabic(roman); // get the result from arabic
+        return quotation * result; // return the final result with the cotation applied (credits)
     } catch (err){
-
-        // if conversion to number is no valid then returns NaN
-        return NaN;
+        return NaN; // if conversion to number is no valid then returns NaN
     }
 }
 
